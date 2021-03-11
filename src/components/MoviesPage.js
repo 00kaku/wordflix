@@ -56,6 +56,8 @@ function MovieCard({ movie }) {
 	const setId = () => {
 		localStorage.setItem("id", movie.id);
 	};
+
+	const featuredImageFallback = "https://via.placeholder.com/236x332";
 	return (
 		<Card
 			style={{
@@ -70,7 +72,11 @@ function MovieCard({ movie }) {
 				<div>
 					<img
 						className="thumbnail"
-						src={movie.featuredImage.node.sourceUrl}
+						src={
+							movie.featuredImage
+								? movie.featuredImage.node.sourceUrl
+								: featuredImageFallback
+						}
 						alt="poster for the movie title"
 					/>
 					<MovieTitle>{movie.title} </MovieTitle>
