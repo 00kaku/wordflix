@@ -8,6 +8,9 @@ A website that that shows information about various superhero movies.User from h
 ###### Advanced custom field plugin is used to create a custom release date field for the movies.
 
 #### Screenshots
+![Screenshot from 2021-03-11 12-33-03](https://user-images.githubusercontent.com/22026768/110748799-41f85180-8266-11eb-95d7-974c0eb2d403.png)
+![Screenshot from 2021-03-11 12-33-21](https://user-images.githubusercontent.com/22026768/110748805-4290e800-8266-11eb-89b7-c6a846208fc9.png)
+![Screenshot from 2021-03-11 12-33-41](https://user-images.githubusercontent.com/22026768/110748809-445aab80-8266-11eb-9bd1-f808fd7b1981.png)
 
 
 #### How to use
