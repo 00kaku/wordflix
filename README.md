@@ -1,6 +1,6 @@
 # A React application with Wordpress+Graphql backend that shows information about superhero movies.
 
-A website that that shows information about various superhero movies.User from home page can go to browse movies page where they see a thumbnail and name of the movies in listing. On clickin any movie  tile user will be moved to details page where they can see a detailed tile of the superhero movie with release date and synopsis. The website is fully responsive and mobile first.
+A website that that shows information about various superhero movies.User from home page can go to browse movies page where they see a thumbnail and name of the movies in listing. On clickin any movie  tile user will be moved to details page where they can see a detailed tile of the superhero movie with release date and synopsis.User can also click on load more button and can load new movies. **GraphQL cursor based pagination** is used for load more feature.The website is fully responsive and mobile first.
 
 ###### ReactJs is used for structure and webstie design.
 ###### Wordpress is used as a headless CMS for the backend of the app.
