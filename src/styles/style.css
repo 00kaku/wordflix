@@ -1,0 +1,23 @@
+@import "fonts/anime_ace_2/stylesheet.css";
+@import "fonts/avengeance_mightiest_avengeRg/stylesheet.css";
+@import "fonts/TT Firs Medium/TTFirs-ExtraBoldItalic.css";
+
+.thumbnail {
+	width: 100%;
+}
+
+.loader {
+	width: 150px;
+	height: 150px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+
+.loader span {
+	font-size: 200px;
+	color: white;
+}

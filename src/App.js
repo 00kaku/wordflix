@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import HomePage from "./components/HomePage";
+import PageLayout from "./components/PageLayout";
+import MoviePage from "./components/MoviePage";
+import MoviesPage from "./components/MoviesPage";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "@apollo/react-hooks";
+import "antd/dist/antd.css";
+import "./styles/style.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  client = new ApolloClient({
+    uri: " http://wordflix.local/graphql",
+  });
+  render() {
+    return (
+      <ApolloProvider client={this.client}>
+        <Router>
+          <Route exact path="/movies">
+            <PageLayout>
+              <MoviesPage />
+            </PageLayout>
+          </Route>
+          <Route path="/movies/:movieId">
+            <PageLayout>
+              <MoviePage />
+            </PageLayout>
+          </Route>
+          <Route exact path="/" component={HomePage} />
+        </Router>
+      </ApolloProvider>
+    );
+  }
 }
 
 export default App;

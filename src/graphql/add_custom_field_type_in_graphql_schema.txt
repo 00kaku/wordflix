@@ -1,0 +1,11 @@
+
+add_action( 'graphql_register_types', function() {
+    register_graphql_field( 'Post', 'release_date', [
+       'type' => 'String',
+       'description' => __( 'Release date of the movie', 'wp-graphql' ),
+       'resolve' => function( $post ) {
+         $release_date = get_post_meta( $post->ID, 'release_date', true );
+         return ! empty( $release_date ) ? $release_date : "";
+       }
+    ] );
+} );
