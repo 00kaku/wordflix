@@ -43,14 +43,18 @@ function MoviePage() {
 	const { loading, data } = useQuery(GET_MOVIE, {
 		variables: { id: localStorage.getItem("id") },
 	});
-
+	const featuredImageFallback = "https://via.placeholder.com/341x512";
 	if (!loading) {
 		return (
 			<MovieDetails>
 				<Poster>
 					<img
 						alt={"poster for Movie Title"}
-						src={data.post.featuredImage.node.sourceUrl}
+						src={
+							data.post.featuredImage
+								? data.post.featuredImage.node.sourceUrl
+								: featuredImageFallback
+						}
 						style={{
 							marginLeft: "auto",
 							marginRight: "auto",
