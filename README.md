@@ -6,6 +6,7 @@ A website that that shows information about various superhero movies.User from h
 ###### Wordpress is used as a headless CMS for the backend of the app.
 ###### WPGraphQL plugin is used to create graphql end points in wordpress bank end.
 ###### Advanced custom field plugin is used to create a custom release date field for the movies.
+###### ApolloClient is used for graphql queries.
 
 #### Screenshots
 ![Screenshot from 2021-03-11 12-33-03](https://user-images.githubusercontent.com/22026768/110748799-41f85180-8266-11eb-95d7-974c0eb2d403.png)
